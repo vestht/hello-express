@@ -7,6 +7,8 @@ pipeline {
         stage("build") {
             steps {
                 sh "echo 'hello'"
+                sh "pwd"
+                sh "ls -all"
             }
         }
 
