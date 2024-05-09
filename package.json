@@ -1,0 +1,12 @@
+{
+  "name": "hello-express",
+  "version": "0.0.1",
+  "main": "app.js",
+  "author": "Shyamin Ayesh",
+  "scripts": {
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
