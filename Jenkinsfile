@@ -18,6 +18,7 @@ pipeline {
                     sh "export AWS_DEFAULT_REGION=ap-southeast-1"
                     sh "aws ecr get-login-password --region ap-southeast-1 | docker login --username AWS --password-stdin 212994986522.dkr.ecr.ap-southeast-1.amazonaws.com"
                     sh "docker tag vestht:latest 212994986522.dkr.ecr.ap-southeast-1.amazonaws.com/vestht:latest"
+                    sh "docker push 212994986522.dkr.ecr.ap-southeast-1.amazonaws.com/vestht:latest"
                 }
             }
         }
