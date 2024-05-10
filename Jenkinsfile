@@ -12,7 +12,9 @@ pipeline {
 
         stage("ecr::push") {
             steps {
-                sh "aws s3 ls"
+                withCredentials([string(credentialsId: 'AWS_ACCESS_KEY_ID', variable: 'AWS_ACCESS_KEY_ID')], ) {
+                    sh "echo ${AWS_ACCESS_KEY_ID}"
+                }
             }
         }
 
