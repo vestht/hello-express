@@ -6,7 +6,7 @@ pipeline {
 
         stage("build") {
             steps {
-                sh "docker build -t vestht:latest ."
+                sh "make docker-build"
             }
         }
 
