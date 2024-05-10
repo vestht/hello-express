@@ -6,8 +6,13 @@ pipeline {
 
         stage("build") {
             steps {
-                sh "whoami"
                 sh "make docker-build"
+            }
+        }
+
+        stage("ecr::push") {
+            steps {
+                sh "aws s3 ls"
             }
         }
 
